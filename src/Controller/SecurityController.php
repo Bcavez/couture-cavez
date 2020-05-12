@@ -12,7 +12,6 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
  *
  * @Route("/admin")
  */
-
 class SecurityController extends AbstractController
 {
     /**
@@ -20,9 +19,9 @@ class SecurityController extends AbstractController
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
-         if ($this->getUser()) {
-             return $this->redirectToRoute('easyadmin');
-         }
+        if ($this->getUser()) {
+            return $this->redirectToRoute('easyadmin');
+        }
 
         // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
@@ -50,7 +49,6 @@ class SecurityController extends AbstractController
             // the 'name' HTML attribute of the <input> used for the password field (default: '_password')
             'password_parameter' => 'password',
         ]);
-
     }
 
     /**
