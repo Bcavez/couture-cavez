@@ -4,7 +4,7 @@ recipe: lamp
 
 config:
   webroot: public
-  php: '7.3'
+  php: '7.4'
   database: mariadb:10.2
   xdebug: false
 
