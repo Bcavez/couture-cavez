@@ -1,0 +1,4 @@
+# Admin
+login.form.username.label: 'Email'
+login.form.password.label: 'Password'
+login.form.submit.label: 'Let me in !'
