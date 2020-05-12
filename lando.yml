@@ -1,0 +1,44 @@
+name: couture-cavez
+
+recipe: lamp
+
+config:
+  webroot: public
+  php: '7.3'
+  database: mariadb:10.2
+  xdebug: false
+
+services:
+  appserver:
+    run:
+      - "cd $LANDO_MOUNT && chmod u+x ./go.sh"
+
+tooling:
+  composer:
+    service: appserver
+    cmd:
+      - "composer --ansi --working-dir=/app"
+  test:
+    service: appserver
+    description: Runs our phpunit tests
+    cmd:
+      - "php /app/vendor/bin/phpunit"
+  symfony:
+    service: appserver
+    description: Runs the bin/console commands
+    cmd:
+      - "php /app/bin/console"
+  go:
+    service: appserver
+    description: Run Emakina helper script
+    cmd: ./go.sh
+  xdebug-on:
+    service: appserver
+    description: Enable xdebug for apache.
+    cmd: "docker-php-ext-enable xdebug && /etc/init.d/apache2 reload"
+    user: root
+  xdebug-off:
+    service: appserver
+    description: Disable xdebug for apache.
+    cmd: "rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && /etc/init.d/apache2 reload"
+    user: root
