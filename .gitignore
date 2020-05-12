@@ -11,3 +11,4 @@
 /.idea/
 /.php_cs.cache
 /tmp-phpqa/
+/lsp/
