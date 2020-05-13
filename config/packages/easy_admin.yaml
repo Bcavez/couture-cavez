@@ -9,6 +9,9 @@ easy_admin:
     brand_color: '#003975'
     menu:
       - { label: 'Content' }
+      - { entity: 'Cloth', permission: 'ROLE_ADMIN', label: 'Cloth', icon: 'tshirt' }
+      - { entity: 'Mask', permission: 'ROLE_ADMIN', label: 'Mask', icon: 'mask' }
+      - { entity: 'Pants', permission: 'ROLE_ADMIN', label: 'Pants', icon: 'socks' }
       - { label: 'Administration', permission: 'ROLE_ADMIN' }
       - { entity: 'User', permission: 'ROLE_ADMIN', label: 'Users', icon: 'user' }
       - { label: '____________________' }
@@ -25,6 +28,91 @@ easy_admin:
       - { name: 'delete', icon: 'trash' }
 
   entities:
+    Cloth:
+      class: App\Entity\Cloth
+      label: Cloth
+      help: |
+        Pieces of cloth
+      form:
+        fields:
+          - { property: 'name', type_options: { required: true } }
+          - { property: 'picture', type: 'file', type_options: { required: true } }
+          - { property: 'price', type_options: { required: true } }
+          - { property: 'summary', type_options: { required: true} }
+          - { property: 'description', type_options: { required: true} }
+          - { property: 'published' }
+      show:
+        fields:
+          - { property: 'id'}
+          - { property: 'name'}
+          - { property: 'picture' }
+          - { property: 'price', type: 'money', type_options: { currency: 'EUR' } }
+          - { property: 'summary' }
+          - { property: 'description' }
+      list:
+        actions: ['show']
+        fields:
+          - { property: 'id'}
+          - { property: 'name' }
+          - { property: 'picture', type: 'image' }
+          - { property: 'published' }
+    Mask:
+      class: App\Entity\Mask
+      label: Mask
+      help: |
+        Some masks
+      form:
+        fields:
+          - { property: 'name', type: 'string', type_options: { required: true } }
+          - { property: 'picture', type: 'file', type_options: { required: true } }
+          - { property: 'price', type: 'float', type_options: { required: true } }
+          - { property: 'summary', type: 'string', type_options: { required: true} }
+          - { property: 'description', type: 'text', type_options: { required: true} }
+          - { property: 'published' }
+      show:
+        fields:
+          - { property: 'id'}
+          - { property: 'name'}
+          - { property: 'picture' }
+          - { property: 'price', type: 'money', type_options: { currency: 'EUR' } }
+          - { property: 'summary' }
+          - { property: 'description' }
+      list:
+        actions: ['show']
+        fields:
+          - { property: 'id'}
+          - { property: 'name' }
+          - { property: 'picture', type: 'image' }
+          - { property: 'published' }
+    Pants:
+      class: App\Entity\Pants
+      label: Pants
+      help: |
+        Some pants
+      form:
+        fields:
+          - { property: 'name', type: 'string', type_options: { required: true } }
+          - { property: 'picture', type: 'file', type_options: { required: true } }
+          - { property: 'price', type: 'float', type_options: { required: true } }
+          - { property: 'summary', type: 'string', type_options: { required: true} }
+          - { property: 'description', type: 'text', type_options: { required: true} }
+          - { property: 'published' }
+      show:
+        fields:
+          - { property: 'id'}
+          - { property: 'name'}
+          - { property: 'picture' }
+          - { property: 'price', type: 'money', type_options: { currency: 'EUR' } }
+          - { property: 'summary' }
+          - { property: 'description' }
+      list:
+        actions: ['show']
+        fields:
+          - { property: 'id'}
+          - { property: 'name' }
+          - { property: 'picture', type: 'image' }
+          - { property: 'published' }
+
     # Backend users
     User:
       class: App\Entity\User
