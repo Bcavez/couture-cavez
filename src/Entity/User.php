@@ -42,7 +42,6 @@ class User implements UserInterface
      */
     private $plainPassword;
 
-
     /**
      * @return int|null
      */

@@ -10,14 +10,12 @@ use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Mapping\InheritanceType;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
-
 /**
  * @ORM\Entity(repositoryClass=ProductRepository::class)
  * @Entity
  * @InheritanceType("JOINED")
  * @DiscriminatorColumn(name="discr", type="string")
  * @DiscriminatorMap({"product" = "Product", "cloth" = "Cloth", "mask" = "Mask", "pants" = "Pants"})
-
  */
 class Product
 {

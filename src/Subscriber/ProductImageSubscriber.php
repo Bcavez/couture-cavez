@@ -59,14 +59,14 @@ class ProductImageSubscriber implements EventSubscriberInterface
 
         /**
          * Psalm does not seem to detect that we already checked that result is indeed an instance of Product
-         * 
+         *
          * @psalm-suppress PossiblyInvalidMethodCall
          */
         $file = $result->getPicture();
 
         if ($file instanceof UploadedFile) {
             $url = $this->imageService->saveToDisk($file);
-            /**
+            /*
              * Psalm does not seem to detect that we already checked that result is indeed an instance of Product
              *
              * @psalm-suppress PossiblyInvalidMethodCall

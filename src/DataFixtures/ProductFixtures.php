@@ -44,7 +44,6 @@ class ProductFixtures extends Fixture
      */
     public function load(ObjectManager $manager)
     {
-
         for ($i = 0; $i < 4; ++$i) {
             // Cloth
             $product1 = new Cloth();
@@ -69,7 +68,8 @@ class ProductFixtures extends Fixture
      *
      * @throws \Exception
      */
-    private function setCommonFields(Product $entity) {
+    private function setCommonFields(Product $entity)
+    {
         $url = $this->uploadImageFromFixturesPath('fixture1.jpeg');
         $entity->setPicture($url);
 
@@ -90,7 +90,8 @@ class ProductFixtures extends Fixture
      *
      * @return string
      */
-    private function uploadImageFromFixturesPath($path) {
+    private function uploadImageFromFixturesPath($path)
+    {
         // We first need to copy the image to temp location
         // so it is that temp file which is moved around by the fakeUploadImage
         $fs = new Filesystem();
