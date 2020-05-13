@@ -12,3 +12,4 @@
 /.php_cs.cache
 /tmp-phpqa/
 /lsp/
+/public/uploads/

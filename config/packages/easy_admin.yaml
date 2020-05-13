@@ -45,12 +45,13 @@ easy_admin:
         fields:
           - { property: 'id'}
           - { property: 'name'}
-          - { property: 'picture' }
+          - { property: 'picture', type: 'image' }
           - { property: 'price', type: 'money', type_options: { currency: 'EUR' } }
           - { property: 'summary' }
           - { property: 'description' }
+        actions: ['-edit']
       list:
-        actions: ['show']
+        actions: ['show', '-edit']
         fields:
           - { property: 'id'}
           - { property: 'name' }
@@ -73,12 +74,13 @@ easy_admin:
         fields:
           - { property: 'id'}
           - { property: 'name'}
-          - { property: 'picture' }
+          - { property: 'picture', type: 'image' }
           - { property: 'price', type: 'money', type_options: { currency: 'EUR' } }
           - { property: 'summary' }
           - { property: 'description' }
+        actions: ['-edit']
       list:
-        actions: ['show']
+        actions: ['show', '-edit']
         fields:
           - { property: 'id'}
           - { property: 'name' }
@@ -101,12 +103,13 @@ easy_admin:
         fields:
           - { property: 'id'}
           - { property: 'name'}
-          - { property: 'picture' }
+          - { property: 'picture', type: 'image' }
           - { property: 'price', type: 'money', type_options: { currency: 'EUR' } }
           - { property: 'summary' }
           - { property: 'description' }
+        actions: ['-edit']
       list:
-        actions: ['show']
+        actions: ['show', '-edit']
         fields:
           - { property: 'id'}
           - { property: 'name' }
