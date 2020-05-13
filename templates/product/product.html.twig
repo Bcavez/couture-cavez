@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    <h1>{{ title }}</h1>
+    {% for product in products  %}
+        {% if product.published %}
+            <img src="{{ product.picture }}" alt="">
+            <div>
+                <p>name: {{ product.name }}</p>
+                <p>{{ product.price }} €</p>
+                <p>short summary: </p>
+                <p>{{ product.summary }}</p>
+                <p>description:</p>
+                <p>{{ product.description }}</p>
+                ----------------------
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
