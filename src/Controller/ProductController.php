@@ -29,7 +29,7 @@ class ProductController extends AbstractController
 
         $products = $repository->findAll();
 
-        return $this->render('product/product.html.twig', ['products' => $products, 'title' => 'Cloth']);
+        return $this->render('product/product.html.twig', ['products' => $products, 'title' => 'cloths.name']);
     }
 
     /**
@@ -46,7 +46,7 @@ class ProductController extends AbstractController
 
         $products = $repository->findAll();
 
-        return $this->render('product/product.html.twig', ['products' => $products, 'title' => 'Mask']);
+        return $this->render('product/product.html.twig', ['products' => $products, 'title' => 'masks.name']);
     }
 
     /**
@@ -63,6 +63,6 @@ class ProductController extends AbstractController
 
         $products = $repository->findAll();
 
-        return $this->render('product/product.html.twig', ['products' => $products, 'title' => 'Pants']);
+        return $this->render('product/product.html.twig', ['products' => $products, 'title' => 'pants.name']);
     }
 }

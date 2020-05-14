@@ -3,15 +3,14 @@
 {% block title %}{% endblock %}
 
 {% block body %}
-    <h1>Welcome to Etoile de Marius!</h1>
-    <p>Checkout our products:</p>
+    {{ 'welcome.message' | trans | raw }}
     <div>
-        <a href="/cloth">Cloths</a>
+        <a href="{{ path('cloth') }}">{{ 'cloths.name' | trans }}</a>
     </div>
     <div>
-        <a href="/pants">Pants</a>
+        <a href="{{ path('pants') }}">{{ 'pants.name' | trans }}</a>
     </div>
     <div>
-        <a href="/mask">Masks</a>
+        <a href="{{ path('mask') }}">{{ 'masks.name' | trans }}</a>
     </div>
 {% endblock %}

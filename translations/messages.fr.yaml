@@ -7,13 +7,9 @@ welcome.message: "<p>Bienvenue sur le petit coin boutique de l'étoile de Marius
                   <p>Depuis, je me fais un plaisir de coudre pour les connaissances, de faire quelques marchés de créateurs et l’idée d’un site internet est de créer un petit endroit pour regrouper ce que je peux proposer.</p> </br>
                   <p>Bonne visite!</p>
                   <p>Sophie</p>"
-cloths.name: 'Fabrics'
-pants.name: 'Pants'
-masks.name: 'Masks'
-label.name: 'Name'
-label.summary: 'Short summary'
+cloths.name: 'Tissus'
+pants.name: 'Pantalons'
+masks.name: 'Masques'
+label.name: 'Nom'
+label.summary: 'Résumé'
 label.description: 'Description'
-# Admin
-login.form.username.label: 'Email'
-login.form.password.label: 'Password'
-login.form.submit.label: 'Let me in !'
