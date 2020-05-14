@@ -10,6 +10,7 @@ welcome.message: "<p>Bienvenue sur le petit coin boutique de l'étoile de Marius
 cloths.name: 'Tissus'
 pants.name: 'Pantalons'
 masks.name: 'Masques'
+welcome.name: 'Accueil'
 label.name: 'Nom'
 label.summary: 'Résumé'
 label.description: 'Description'

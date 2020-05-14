@@ -4,13 +4,4 @@
 
 {% block body %}
     {{ 'welcome.message' | trans | raw }}
-    <div>
-        <a href="{{ path('cloth') }}">{{ 'cloths.name' | trans }}</a>
-    </div>
-    <div>
-        <a href="{{ path('pants') }}">{{ 'pants.name' | trans }}</a>
-    </div>
-    <div>
-        <a href="{{ path('mask') }}">{{ 'masks.name' | trans }}</a>
-    </div>
 {% endblock %}

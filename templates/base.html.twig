@@ -6,6 +6,10 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+        <a href="{{ path('index') }}">{{ 'welcome.name' | trans }}</a>
+        <a href="{{ path('cloth') }}">{{ 'cloths.name' | trans }}</a>
+        <a href="{{ path('pants') }}">{{ 'pants.name' | trans }}</a>
+        <a href="{{ path('mask') }}">{{ 'masks.name' | trans }}</a>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
