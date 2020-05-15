@@ -70,8 +70,9 @@ class ProductFixtures extends Fixture
      */
     private function setCommonFields(Product $entity)
     {
-        $url = $this->uploadImageFromFixturesPath('fixture1.jpeg');
-        $entity->setPicture($url);
+        // We use url of hosted images instead of hosting images ourselves.
+        // $url = $this->uploadImageFromFixturesPath('fixture1.jpeg');
+        $entity->setPicture("https://instagram.fbru2-1.fna.fbcdn.net/v/t51.2885-15/e35/c0.124.1440.1440a/s320x320/95607434_655760595268284_6620484166717808809_n.jpg?_nc_ht=instagram.fbru2-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=sdClw-95fJQAX-r656J&oh=752b765234b1c5d365077c648f8c99f5&oe=5EE82381");
 
         $entity->setName($this->faker->firstName);
         $entity->setPrice($this->faker->randomNumber(2));

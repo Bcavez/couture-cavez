@@ -37,7 +37,9 @@ class ProductImageSubscriber implements EventSubscriberInterface
     public static function getSubscribedEvents()
     {
         return [
-            'easy_admin.pre_persist' => ['postPicture'],
+            // We no longer store image in the server, instead we use url of images hosted elsewhere
+            // so this subscriber is not used for now
+            // 'easy_admin.pre_persist' => ['postPicture'],
         ];
     }
 

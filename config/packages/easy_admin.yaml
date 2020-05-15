@@ -36,7 +36,7 @@ easy_admin:
       form:
         fields:
           - { property: 'name', type_options: { required: true } }
-          - { property: 'picture', type: 'file', type_options: { required: true } }
+          - { property: 'picture', type_options: { required: true } }
           - { property: 'price', type_options: { required: true } }
           - { property: 'summary', type_options: { required: true} }
           - { property: 'description', type_options: { required: true} }
@@ -49,9 +49,8 @@ easy_admin:
           - { property: 'price', type: 'money', type_options: { currency: 'EUR' } }
           - { property: 'summary' }
           - { property: 'description' }
-        actions: ['-edit']
       list:
-        actions: ['show', '-edit']
+        actions: ['show']
         fields:
           - { property: 'id'}
           - { property: 'name' }
@@ -65,7 +64,7 @@ easy_admin:
       form:
         fields:
           - { property: 'name', type_options: { required: true } }
-          - { property: 'picture', type: 'file', type_options: { required: true } }
+          - { property: 'picture', type_options: { required: true } }
           - { property: 'price', type_options: { required: true } }
           - { property: 'summary', type_options: { required: true} }
           - { property: 'description', type_options: { required: true} }
@@ -78,9 +77,8 @@ easy_admin:
           - { property: 'price', type: 'money', type_options: { currency: 'EUR' } }
           - { property: 'summary' }
           - { property: 'description' }
-        actions: ['-edit']
       list:
-        actions: ['show', '-edit']
+        actions: ['show']
         fields:
           - { property: 'id'}
           - { property: 'name' }
@@ -94,7 +92,7 @@ easy_admin:
       form:
         fields:
           - { property: 'name', type_options: { required: true } }
-          - { property: 'picture', type: 'file', type_options: { required: true } }
+          - { property: 'picture', type_options: { required: true } }
           - { property: 'price', type_options: { required: true } }
           - { property: 'summary', type_options: { required: true} }
           - { property: 'description', type_options: { required: true} }
@@ -107,9 +105,8 @@ easy_admin:
           - { property: 'price', type: 'money', type_options: { currency: 'EUR' } }
           - { property: 'summary' }
           - { property: 'description' }
-        actions: ['-edit']
       list:
-        actions: ['show', '-edit']
+        actions: ['show']
         fields:
           - { property: 'id'}
           - { property: 'name' }

@@ -37,7 +37,7 @@ class Product
     private $published = false;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text")
      */
     private $picture;
 
@@ -47,7 +47,7 @@ class Product
     private $price;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text")
      */
     private $summary;
 
@@ -105,7 +105,7 @@ class Product
     }
 
     /**
-     * @return string|UploadedFile|null
+     * @return string|null
      */
     public function getPicture()
     {
