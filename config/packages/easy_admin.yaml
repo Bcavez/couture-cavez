@@ -64,11 +64,11 @@ easy_admin:
         Some masks
       form:
         fields:
-          - { property: 'name', type: 'string', type_options: { required: true } }
+          - { property: 'name', type_options: { required: true } }
           - { property: 'picture', type: 'file', type_options: { required: true } }
-          - { property: 'price', type: 'float', type_options: { required: true } }
-          - { property: 'summary', type: 'string', type_options: { required: true} }
-          - { property: 'description', type: 'text', type_options: { required: true} }
+          - { property: 'price', type_options: { required: true } }
+          - { property: 'summary', type_options: { required: true} }
+          - { property: 'description', type_options: { required: true} }
           - { property: 'published' }
       show:
         fields:
@@ -93,11 +93,11 @@ easy_admin:
         Some pants
       form:
         fields:
-          - { property: 'name', type: 'string', type_options: { required: true } }
+          - { property: 'name', type_options: { required: true } }
           - { property: 'picture', type: 'file', type_options: { required: true } }
-          - { property: 'price', type: 'float', type_options: { required: true } }
-          - { property: 'summary', type: 'string', type_options: { required: true} }
-          - { property: 'description', type: 'text', type_options: { required: true} }
+          - { property: 'price', type_options: { required: true } }
+          - { property: 'summary', type_options: { required: true} }
+          - { property: 'description', type_options: { required: true} }
           - { property: 'published' }
       show:
         fields:
