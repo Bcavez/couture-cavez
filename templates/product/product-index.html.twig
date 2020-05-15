@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    <h1>{{ title | trans }}</h1>
+    {% for product in products  %}
+        {% if product.published %}
+            <div>
+                <div>
+                    <img src="{{ product.picture }}" alt="">
+                </div>
+                <div>
+                    <p>{{ 'label.name' | trans }}: {{ product.name }}</p>
+                    <p>{{ product.price }} €</p>
+                    <p>{{ 'label.summary' | trans }}: </p>
+                    <p>{{ product.summary }}</p>
+                    <a href="{{ path(show_route, { 'id': product.id }) }}">See more</a>
+                </div>
+                ----------------------
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

@@ -16,37 +16,71 @@ use Symfony\Component\Routing\Annotation\Route;
 class ProductController extends AbstractController
 {
     /**
-     * @Route("/cloth", name="cloth", methods="GET")
+     * @Route("/cloth", name="cloths", methods="GET")
      *
      * @param Request $request
      *
      * @return Response
      */
-    public function Cloth(Request $request): Response
+    public function cloths(Request $request): Response
     {
         /** @var ClothRepository $repository */
         $repository = $this->getDoctrine()->getRepository(Cloth::class);
 
         $products = $repository->findAll();
 
-        return $this->render('product/product.html.twig', ['products' => $products, 'title' => 'cloths.name']);
+        return $this->render('product/product-index.html.twig', ['products' => $products, 'title' => 'cloths.name', 'show_route' => 'cloth']);
     }
 
     /**
-     * @Route("/mask", name="mask", methods="GET")
+     * @Route("/cloth/{id}", name="cloth", methods="GET")
+     *
+     * @param $id
+     * @param Request $request
+     *
+     * @return Response
+     */
+    public function cloth($id, Request $request): Response
+    {
+        $repository = $this->getDoctrine()->getRepository(Cloth::class);
+
+        $product = $repository->find($id);
+
+        return $this->render('product/product-show.html.twig', ['product' => $product]);
+    }
+
+    /**
+     * @Route("/mask", name="masks", methods="GET")
      *
      * @param Request $request
      *
      * @return Response
      */
-    public function Mask(Request $request): Response
+    public function masks(Request $request): Response
     {
         /** @var MaskRepository $repository */
         $repository = $this->getDoctrine()->getRepository(Mask::class);
 
         $products = $repository->findAll();
 
-        return $this->render('product/product.html.twig', ['products' => $products, 'title' => 'masks.name']);
+        return $this->render('product/product-index.html.twig', ['products' => $products, 'title' => 'masks.name', 'show_route' => 'mask']);
+    }
+
+    /**
+     * @Route("/mask/{id}", name="mask", methods="GET")
+     *
+     * @param $id
+     * @param Request $request
+     *
+     * @return Response
+     */
+    public function mask($id, Request $request): Response
+    {
+        $repository = $this->getDoctrine()->getRepository(Mask::class);
+
+        $product = $repository->find($id);
+
+        return $this->render('product/product-show.html.twig', ['product' => $product]);
     }
 
     /**
@@ -56,13 +90,30 @@ class ProductController extends AbstractController
      *
      * @return Response
      */
-    public function Pants(Request $request): Response
+    public function pants(Request $request): Response
     {
         /** @var PantsRepository $repository */
         $repository = $this->getDoctrine()->getRepository(Pants::class);
 
         $products = $repository->findAll();
 
-        return $this->render('product/product.html.twig', ['products' => $products, 'title' => 'pants.name']);
+        return $this->render('product/product-index.html.twig', ['products' => $products, 'title' => 'pants.name', 'show_route' => 'pant']);
+    }
+
+    /**
+     * @Route("/pant/{id}", name="pant", methods="GET")
+     *
+     * @param $id
+     * @param Request $request
+     *
+     * @return Response
+     */
+    public function pant($id, Request $request): Response
+    {
+        $repository = $this->getDoctrine()->getRepository(Pants::class);
+
+        $product = $repository->find($id);
+
+        return $this->render('product/product-show.html.twig', ['product' => $product]);
     }
 }

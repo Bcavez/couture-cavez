@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    <div>
+        <h2>{{ 'label.name' | trans }}: {{ product.name }}</h2>
+        <div>
+            <img src="{{ product.picture }}" alt="">
+        </div>
+        <div>
+            <p>{{ product.price }} €</p>
+            <p>{{ 'label.summary' | trans }}: </p>
+            <p>{{ product.summary }}</p>
+            <p>{{ 'label.description' | trans }}:</p>
+            <p>{{ product.description }}</p>
+        </div>
+    </div>
+{% endblock %}
