@@ -5,7 +5,7 @@ recipe: lamp
 config:
   webroot: public
   php: '7.4'
-  database: mariadb:10.2
+  database: postgres
   xdebug: false
 
 services:

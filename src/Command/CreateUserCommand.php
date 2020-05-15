@@ -56,23 +56,30 @@ class CreateUserCommand extends Command
     {
         $inputs = $input->getArguments();
 
-        $user = new User();
+        try {
+            $user = new User();
 
-        $user->setEmail($inputs['email']);
-        $user->setRoles([$inputs['role']]);
-        $user->setPassword($this->passwordEncoder->encodePassword(
-            $user,
-            $inputs['password']
-        ));
+            $user->setEmail($inputs['email']);
+            $user->setRoles([$inputs['role']]);
+            $user->setPassword($this->passwordEncoder->encodePassword(
+                $user,
+                $inputs['password']
+            ));
 
-        $this->manager->persist($user);
+            $this->manager->persist($user);
 
-        $this->manager->flush();
+            $this->manager->flush();
 
-        $output->writeln([
-            'Created user '.$user->getEmail(),
-            'with roles: '.implode(',', $user->getRoles()),
-        ]);
+            $output->writeln([
+                'Created user '.$user->getEmail(),
+                'with roles: '.implode(',', $user->getRoles()),
+            ]);
+        } catch (\Exception $e) {
+            $output->writeln([
+               'Something went wrong',
+                $e,
+            ]);
+        }
 
         return 0;
     }
